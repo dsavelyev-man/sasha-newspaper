@@ -1,0 +1,19 @@
+<form target="/" method="post">
+    <label>
+        <span>Заголовок</span>
+        <input name="title"></textarea>
+    </label>
+      <label>
+        <span>Описание новости</span>
+        <textarea name="description"> </textarea>
+    </label>
+    <button type="submit">Создать</button>
+</form>
+
+{{#each papers}}
+    <h1>{{this.title}}</h1>
+    <h1>{{this.description}}</h1>
+    <p>
+        Создана в: {{this.date}}
+    </p>
+{{/each}}
