@@ -1,19 +1,29 @@
-<form target="/" method="post">
-    <label>
-        <span>Заголовок</span>
-        <input name="title"></textarea>
-    </label>
-      <label>
-        <span>Описание новости</span>
-        <textarea name="description"> </textarea>
-    </label>
-    <button type="submit">Создать</button>
-</form>
+<div class="header">
+    <div>
+        <p class="header__random">Random onekdot</p>
+    </div>
 
-{{#each papers}}
-    <h1>{{this.title}}</h1>
-    <h1>{{this.description}}</h1>
-    <p>
-        Создана в: {{this.date}}
-    </p>
-{{/each}}
+    <form target="/" method="post">
+        <div class="form">
+                <input placeholder="Заголовок" name="title" class="text__title"></input>
+                <textarea placeholder="Описание" name="description" class="text__title ml"></textarea>
+            <button type="submit">Создать</button>
+        
+        </div>
+    </form>
+</div>
+
+
+<div class="boloto">
+    {{#each papers}}
+        <div class="news">
+            <div>
+            <h1 class="news__title">{{this.title}}</h1>
+            <p class="news__description">{{this.description}}</p>
+            </div>
+            <p class="news__date">
+                Создана в: {{this.date}}
+            </p>
+        </div>
+    {{/each}}   
+</div>
